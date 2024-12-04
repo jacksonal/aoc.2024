@@ -14,5 +14,6 @@ def execute(state, instr):
 with open('input.txt') as file:
     print(sum([reduce(operator.mul,map(int,match)) for match in re.findall(r'mul\((\d{1,3}),(\d{1,3})\)', file.read())]))
 
+#part 2
 with open('input.txt') as file:
     print(reduce(execute, re.findall(r'(mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don\'t\(\))', file.read()), (0,True))[0])
