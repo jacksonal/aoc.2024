@@ -29,6 +29,7 @@ max_possible_antinodes = 0
 for freq in antennae_locs:
     max_possible_antinodes += len(list(combinations(antennae_locs[freq],2))) * 2
 print('max possible:', max_possible_antinodes)
+
 antinodes = set()
 for freq in antennae_locs:
     for ant_pair in combinations(antennae_locs[freq],2):
