@@ -11,7 +11,7 @@ def getLinesFromFile(path):
 def getRowsAsIntLists(path):
   with open(path) as f:
     lines = f.readlines()
-    return [[int(c) for c in l.rstrip('\n').split()] for l in lines]
+    return [[int(c) for c in l.rstrip('\n')] for l in lines]
 
 def getRowsAsLists(path):
   with open(path) as f:
