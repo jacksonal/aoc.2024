@@ -13,7 +13,7 @@ for linenum, text in enumerate(getLinesFromFile('input.txt')):
         coeffs[1].append(numbers[1])
     elif linenum%4 == 2:
         consts.extend(list(map(lambda a: int(a) + 10000000000000,re.findall(r'\d+', text))))
-        solution = np.round(np.linalg.solve(coeffs, consts),5)
+        solution = np.round(np.linalg.solve(coeffs, consts),3)
         # print(coeffs)
         # print(consts)
         print(solution)
@@ -29,3 +29,4 @@ for linenum, text in enumerate(getLinesFromFile('input.txt')):
         coeffs = [[],[]]
         consts.clear()
 print(int(tokens))
+#86097067143304
